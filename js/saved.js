@@ -1,2 +1,28 @@
 //how much money you will save with a monthly contribution
 
+//Monthly contribution
+const c = 200;
+
+const time = 20;
+
+//Interest Rate(i) %
+const i = 1.20;
+
+//Frequency(m) 12 meses
+const m = 12;
+
+const periods = time*m;
+
+//Monthly effective interest
+const lm = i/m;
+
+const currentValue = (c, lm, periods) => {
+    //Update factor(uf)
+    const uf = (1-(1+(lm/100))**-periods)/(lm/100);
+    //Early rent adjustment(era)
+    const era = 1 + (lm/100);
+    return c*uf*era;
+}
+
+const cValue = currentValue(c, lm, periods).toFixed(2);
+console.log(cValue); //42698.22

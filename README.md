@@ -7,7 +7,7 @@ Web application where you can calculate the monthly contributions that you need 
 *Monthly contribution (c)
 *Time(t)
 *Interest Rate(i) % 
-*Frequency(m)
+*Frequency(m) -> Ejemplo 2 meses
 
 ### DATA PROCESSING
 *Periods(n) = t*m
@@ -15,7 +15,7 @@ Web application where you can calculate the monthly contributions that you need 
 
 current value = c*(1-(1+lm)^-n)/lm*(1+lm)
 Monthly contribution (c): c
-Update factor : 1-(1+lm)^-n)/lm
+Update factor(uf) : (1-(1+lm)^-n)/lm
 Early rent adjustment: 1+lm -> 1 + 0.10% = 1,001;
 current value = (Monthly contribution) * (Update factor) * (Early rent adjustment)
 
