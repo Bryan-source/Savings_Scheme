@@ -1,4 +1,4 @@
-//how much money you will save with a monthly contribution
+//How much money you will save with a monthly contribution
 
 //Monthly contribution
 const c = 200;
@@ -26,3 +26,10 @@ const currentValue = (c, lm, periods) => {
 
 const cValue = currentValue(c, lm, periods).toFixed(2);
 console.log(cValue); //42698.22
+
+//capitalization factor(cf)
+const cf = (1+lm/100)**periods;
+
+const finalValue = (cValue * cf).toFixed(2);
+
+console.log(finalValue);

@@ -4,22 +4,30 @@ Web application where you can calculate the monthly contributions that you need 
 ## How much money you will save with a monthly contribution.
 
 ### INPUT
-*Monthly contribution (c)
-*Time(t)
-*Interest Rate(i) % 
-*Frequency(m) -> Ejemplo 2 meses
+- Monthly contribution (c)
+
+- Time(t)
+
+- Interest Rate(i) % 
+
+- Frequency(m) -> Ejemplo 2 meses
 
 ### DATA PROCESSING
-*Periods(n) = t*m
-*Monthly effective interest (lm) = i/m
+- Periods(n) = t*m
 
-current value = c*(1-(1+lm)^-n)/lm*(1+lm)
-Monthly contribution (c): c
-Update factor(uf) : (1-(1+lm)^-n)/lm
-Early rent adjustment: 1+lm -> 1 + 0.10% = 1,001;
-current value = (Monthly contribution) * (Update factor) * (Early rent adjustment)
+- Monthly effective interest (lm) = i/m
 
-capitalization factor = (1+lm)^n
+- current value = c*(1-(1+lm)^-n)/lm*(1+lm)
+
+- Monthly contribution (c): c
+
+- Update factor(uf) : (1-(1+lm)^-n)/lm
+
+- Early rent adjustment: 1+lm -> 1 + 0.10% = 1,001;
+
+- current value = (Monthly contribution) * (Update factor) * (Early rent adjustment)
+
+- capitalization factor(cf) = (1+lm)^n
 
 ### PRINT RESULTS
-Final Value = current value * capitalization factor
+- Final Value = current value * capitalization factor
