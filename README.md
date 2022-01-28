@@ -12,7 +12,7 @@ Web application where you can calculate the monthly contributions that you need 
 
 - Frequency(m) -> Ejemplo 2 meses
 
-### DATA PROCESSING
+### FORMULA
 - Periods(n) = t*m
 
 - Monthly effective interest (lm) = i/m
