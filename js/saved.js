@@ -10,10 +10,6 @@ const i = 1.20;
 //Frequency(m) 12 meses
 const m = 12;
 
-const periods = time*m;
-
-//Monthly effective interest
-const lm = i/m;
 
 //How much money you will save with a monthly contribution
 const savedMoney = (c, time, i, m) => {
@@ -44,4 +40,27 @@ const savedMoney = (c, time, i, m) => {
 }
 
 console.log(savedMoney(c, time, i ,m));
+
+//Calculate how long it takes to save the desired capital
+
+const fv = 60450;
+
+const timeRequired = (c, fv,i, m ) => {
+    const lm = i/m;
+
+    const numerator = (lm/100)*(fv/(1+(lm/100))/c) + 1;
+    const denominator = (1 + (lm/100));
+
+    const log1 = Math.log(numerator);
+    const log2 = Math.log(denominator);
+
+    const periods = log1/log2;
+
+    const time = Math.round(periods/m);
+
+    return time;
+
+}
+
+console.log(timeRequired(c, fv, i, m));
 
