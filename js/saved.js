@@ -64,3 +64,5 @@ const timeRequired = (c, fv,i, m ) => {
 
 console.log(timeRequired(c, fv, i, m));
 
+//The monthly contributions that you need to achieve your goals saving money
+
