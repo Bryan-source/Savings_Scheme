@@ -65,4 +65,26 @@ const timeRequired = (c, fv,i, m ) => {
 console.log(timeRequired(c, fv, i, m));
 
 //The monthly contributions that you need to achieve your goals saving money
+//TODO Optimize the monthly contribution code
+const finalValue = 60000.00;
 
+const monthlyContribution = (fv, time, i, m) => {
+    const periods = time*m;
+    const lm = i/m;
+
+    //capitalization factor(cf)
+    const cf = (1+lm/100)**periods;
+
+    const currentValue = fv/cf;
+
+    //Update factor(uf)
+    const uf = (1-(1+(lm/100))**-periods)/(lm/100);
+
+    //Early rent adjustment(era)
+    const era = 1 + (lm/100);
+
+    const monthlyCont = (currentValue/(uf*era)).toFixed(2);
+    return monthlyCont;
+}
+
+console.log(monthlyContribution(finalValue, time, i, m)); //221.10
